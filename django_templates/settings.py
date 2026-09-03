@@ -120,7 +120,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 #Los css js e imagenes estarán en la carpeta static dentro de la base del proyecto (a nivel del readme pues)
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 # Email
