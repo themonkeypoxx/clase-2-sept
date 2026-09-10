@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'inicio',
 ]
 
 MIDDLEWARE = [
@@ -50,12 +51,15 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'django_templates.urls'
+#importar el coso del sistema 
+import os 
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR,"templates")], #En que carpeta estarán los html. 
+        #En este caso es cualquier carpeta llamada "templates" dentro de la carpeta del proyecto
+        'APP_DIRS': True, #busca cosos dentro de la app
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
@@ -115,6 +119,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = 'static/'
+#Los css js e imagenes estarán en la carpeta static dentro de la base del proyecto (a nivel del readme pues)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 # Email
