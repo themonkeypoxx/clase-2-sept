@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block title %} ¡Bienvenido! {% endblock %}
+{% load static %}
 {% block content %}
     <h1>HOLA TUINIRIJILLOS</h1>
     <p>
@@ -14,5 +15,5 @@
         Minus totam vel accusantium explicabo, ab labore. Quis corporis, maiores veniam reprehenderit, excepturi consequatur, voluptates ipsam vel alias porro distinctio. Aliquam ab libero, ullam aliquid expedita eveniet perferendis et eius.
         Consequatur, laborum delectus facere magni laboriosam provident earum aperiam. Debitis animi tempora repellat quos nam, nihil sapiente delectus cum perferendis culpa corporis veniam inventore quas, dolore fuga odit explicabo placeat.
     </p>
-    <img src="https://media.tenor.com/x9efZijA7aYAAAAM/fsh-spin.gif" alt="pescado">
-{% endblock %}
+    <img src="{% static 'img/fish.gif' %}" alt="pescado">
+{% endblock %}s

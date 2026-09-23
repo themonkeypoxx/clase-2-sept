@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %} <!-- cargar carpeta de estáticos (imgs, js, css)-->
+{% block title %} Perfil {% endblock %}
+
+{% block content %}
+    <h1> El pepe ete sech</h1>
+    <ul>
+        <li>Nombre: {{nombre}}</li>
+        <li>Año: {{año}}</li>
+        <li>Correo: {{correo}}</li>
+    </ul>
+    <img src="{% static 'img/' %}{{ foto }}" alt="Ronaldinho" width="200" height="200">
+{% endblock %}
